@@ -1,0 +1,31 @@
+ALGORITHM dot_product_function_algo
+VAR
+  i,j : INTEGER := 0;
+  ps : FLOAT;
+  EvenVectors :	STRUCT
+            v1 : ARRAY_OF FLOAT[2];
+            v2 : ARRAY_OF FLOAT[2];
+          END_STRUCT
+  evenVector : EvenVectors;
+
+BEGIN
+
+  Write("Rentrez le couple XY de v1 : ")
+  FOR i FROM 0 TO evenVector.v1.length - 1 STEP 1  DO
+    Read(evenVector.v1[i]);
+  END_FOR
+
+  Write("Rentrez le couple XY de v2 : ")
+  FOR i FROM 0 TO evenVector.v1.length - 1 STEP 1  DO
+    Read(evenVector.v2[j]);
+  END_FOR
+
+  ps := dot_product(evenVector);
+
+  IF (ps = 0) THEN
+    Write("Les deux vecteurs donnés sont orthogonaux !")
+  ELSE
+    Write(ps)
+  END_IF
+  
+END
