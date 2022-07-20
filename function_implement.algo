@@ -8,6 +8,19 @@ VAR
           END_STRUCT
   evenVector : EvenVectors;
 
+  //Function declaration
+  FUNCTION dot_product(evenVector : EvenVectors) : FLOAT
+    VAR
+    x1 : FLOAT := evenVector.v1[0];
+    x2 : FLOAT := evenVector.v2[0];
+    y1 : FLOAT := evenVector.v1[1]; 
+    y2 : FLOAT := evenVector.v2[1];
+    ps : FLOAT;
+    BEGIN
+      ps := x1*x2 + y1*y2;
+      RETURN ps;
+    END
+
 BEGIN
 
   Write("Rentrez le couple XY de v1 : ")
